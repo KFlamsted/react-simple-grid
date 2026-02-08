@@ -2,7 +2,7 @@
 
 A simple, lightweight React grid component inspired by Material UI's Grid. Uses CSS Flexbox for responsive layouts.
 
-## Installation
+## Installation (Not working yet)
 
 ```bash
 npm install react-grid-novaz
