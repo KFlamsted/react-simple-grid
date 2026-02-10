@@ -20,10 +20,10 @@ const SPACING_MULTIPLIER = 8
  * If the value is not an object, return it directly
  * If it's an object, get the value for the current breakpoint or the largest smaller breakpoint
  */
-function getResponsiveValue<T>(
+const getResponsiveValue = <T,>(
   value: T | Partial<Record<Breakpoint, T>>,
   breakpoint: Breakpoint,
-): T | undefined {
+): T | undefined => {
   if (typeof value !== "object" || value === null) {
     return value as T | undefined
   }
@@ -49,7 +49,7 @@ function getResponsiveValue<T>(
 /**
  * Get the current breakpoint based on window width
  */
-function getCurrentBreakpoint(width: number): Breakpoint {
+const getCurrentBreakpoint = (width: number): Breakpoint => {
   if (width >= 1920) return "xl"
   if (width >= 1280) return "lg"
   if (width >= 960) return "md"
@@ -60,7 +60,7 @@ function getCurrentBreakpoint(width: number): Breakpoint {
 /**
  * Hook to detect current breakpoint based on window width
  */
-function useBreakpoint(): Breakpoint {
+const useBreakpoint = (): Breakpoint => {
   const [breakpoint, setBreakpoint] = React.useState<Breakpoint>("xs")
 
   React.useEffect(() => {
@@ -87,11 +87,11 @@ function useBreakpoint(): Breakpoint {
 /**
  * Generate CSS class names for grid item sizes
  */
-function _generateSizeClasses(
+const _generateSizeClasses = (
   size: GridSize | undefined,
   columns: number,
   breakpoint: Breakpoint,
-): string[] {
+): string[] => {
   if (size === undefined) {
     // Default to full width if no size specified
     return [`rg-item-${breakpoint}-12`]
@@ -113,10 +113,10 @@ function _generateSizeClasses(
 /**
  * Generate CSS class names for grid item offsets
  */
-function _generateOffsetClasses(
+const _generateOffsetClasses = (
   offset: GridOffset | undefined,
   breakpoint: Breakpoint,
-): string[] {
+): string[] => {
   if (offset === undefined) return []
 
   const offsetValue = getResponsiveValue(offset, breakpoint)
@@ -137,7 +137,7 @@ function _generateOffsetClasses(
 /**
  * Convert spacing value to CSS gap value
  */
-function _spacingToGap(spacing: GridSpacing | undefined): string {
+const _spacingToGap = (spacing: GridSpacing | undefined): string => {
   if (spacing === undefined) return "0px"
 
   if (typeof spacing === "number") {
