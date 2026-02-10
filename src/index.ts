@@ -1,4 +1,4 @@
-export { Grid } from "./Grid";
+export { Grid } from "./Grid"
 export type {
   GridProps,
   GridContainerProps,
@@ -8,4 +8,4 @@ export type {
   GridSpacing,
   GridColumns,
   Breakpoint,
-} from "./types";
+} from "./types"
