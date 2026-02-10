@@ -1,7 +1,10 @@
 {
-  "name": "react-simple-grid",
+  "name": "@kflamsted/react-simple-grid",
   "version": "1.0.0",
   "description": "A simple, lightweight React grid component inspired by Material UI's Grid. Uses CSS Flexbox for responsive layouts.",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -9,6 +12,7 @@
     "dist"
   ],
   "scripts": {
+    "dev": "cd demo && npm install && npm run dev",
     "build": "npm run lint && tsc && copy /Y src\\styles.css dist\\styles.css",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix && prettier --write src",
