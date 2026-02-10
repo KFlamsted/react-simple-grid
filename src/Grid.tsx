@@ -61,9 +61,6 @@ const useBreakpoint = (): Breakpoint => {
   const [breakpoint, setBreakpoint] = React.useState<Breakpoint>("xs")
 
   React.useEffect(() => {
-    // Check if we're in a browser environment
-    if (typeof window === "undefined") return
-
     const handleResize = () => {
       setBreakpoint(getCurrentBreakpoint(window.innerWidth))
     }
