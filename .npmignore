@@ -1,0 +1,12 @@
+demo/
+node_modules/
+*.log
+.env
+.env.local
+.DS_Store
+Thumbs.db
+src/
+tsconfig.json
+eslint.config.js
+.vscode/
+.idea/
