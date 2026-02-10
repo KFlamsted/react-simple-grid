@@ -2,9 +2,6 @@ import React from "react"
 import "./styles.css"
 import type {
   GridProps,
-  GridSize,
-  GridOffset,
-  GridSpacing,
   Breakpoint,
   GridContainerProps,
   GridItemProps,
@@ -82,70 +79,6 @@ const useBreakpoint = (): Breakpoint => {
   }, [])
 
   return breakpoint
-}
-
-/**
- * Generate CSS class names for grid item sizes
- */
-const _generateSizeClasses = (
-  size: GridSize | undefined,
-  columns: number,
-  breakpoint: Breakpoint,
-): string[] => {
-  if (size === undefined) {
-    // Default to full width if no size specified
-    return [`rg-item-${breakpoint}-12`]
-  }
-
-  const sizeValue = getResponsiveValue(size, breakpoint)
-
-  if (sizeValue === undefined) {
-    return []
-  }
-
-  // Calculate percentage based on columns
-  const _percentage = (sizeValue / columns) * 100
-
-  // Return inline style for dynamic sizes
-  return [`rg-dynamic-size`]
-}
-
-/**
- * Generate CSS class names for grid item offsets
- */
-const _generateOffsetClasses = (
-  offset: GridOffset | undefined,
-  breakpoint: Breakpoint,
-): string[] => {
-  if (offset === undefined) return []
-
-  const offsetValue = getResponsiveValue(offset, breakpoint)
-
-  if (offsetValue === undefined) return []
-
-  if (offsetValue === "auto") {
-    return [`rg-offset-${breakpoint}-auto`]
-  }
-
-  if (typeof offsetValue === "number" && offsetValue > 0) {
-    return [`rg-offset-${breakpoint}-${offsetValue}`]
-  }
-
-  return []
-}
-
-/**
- * Convert spacing value to CSS gap value
- */
-const _spacingToGap = (spacing: GridSpacing | undefined): string => {
-  if (spacing === undefined) return "0px"
-
-  if (typeof spacing === "number") {
-    return `${spacing * SPACING_MULTIPLIER}px`
-  }
-
-  // For responsive spacing, we'll use inline styles
-  return `${(spacing.xs ?? 0) * SPACING_MULTIPLIER}px`
 }
 
 /**
