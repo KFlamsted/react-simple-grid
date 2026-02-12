@@ -25,7 +25,19 @@
     "grid",
     "layout",
     "flexbox",
-    "responsive"
+    "responsive",
+    "typescript",
+    "component",
+    "ui",
+    "breakpoint",
+    "12-column",
+    "css-grid",
+    "web",
+    "frontend",
+    "grid-system",
+    "layout-component",
+    "spacing",
+    "columns"
   ],
   "author": "Kristian Flamsted",
   "repository": {
