@@ -20,6 +20,7 @@
         "jsx": "react-jsx",
         "declaration": true,
         "declarationDir": "dist",
+        "rootDir": "src",
         "outDir": "dist",
         "sourceMap": true,
         "composite": true,

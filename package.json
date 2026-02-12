@@ -42,7 +42,7 @@
   "author": "Kristian Flamsted",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KFlamsted/react-simple-grid"
+    "url": "https://github.com/KFlamsted/react-simple-grid.git"
   },
   "bugs": {
     "url": "https://github.com/KFlamsted/react-simple-grid/issues"
