@@ -8,5 +8,7 @@ Thumbs.db
 src/
 tsconfig.json
 eslint.config.js
+.eslintrc.json
+.prettierrc.json
 .vscode/
 .idea/

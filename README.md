@@ -1,8 +1,8 @@
-# React Grid Novaz
+# React Simple Grid
 
 A simple, lightweight React grid component inspired by Material UI's Grid. Uses CSS Flexbox for responsive layouts.
 
-## Installation (Not working yet)
+## Installation
 
 ```bash
 npm install @kflamsted/react-simple-grid

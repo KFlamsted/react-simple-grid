@@ -6,7 +6,7 @@
     "access": "public"
   },
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -25,9 +25,29 @@
     "grid",
     "layout",
     "flexbox",
-    "responsive"
+    "responsive",
+    "typescript",
+    "component",
+    "ui",
+    "breakpoint",
+    "12-column",
+    "css-grid",
+    "web",
+    "frontend",
+    "grid-system",
+    "layout-component",
+    "spacing",
+    "columns"
   ],
-  "author": "",
+  "author": "Kristian Flamsted",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KFlamsted/react-simple-grid"
+  },
+  "bugs": {
+    "url": "https://github.com/KFlamsted/react-simple-grid/issues"
+  },
+  "homepage": "https://github.com/KFlamsted/react-simple-grid#readme",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
